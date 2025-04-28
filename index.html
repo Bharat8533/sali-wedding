@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tanisha & Sukant - Wedding Invitation</title>
+    <meta name="description" content="Wedding invitation for Emma and James" />
+    <meta name="author" content="Lovable" />
+    <meta property="og:image" content="/og-image.png" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon_io/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png" />
+    <link rel="manifest" href="./favicon_io/site.webmanifest" />
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet" />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+    <!-- Tailwind Config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ["Playfair Display", "serif"],
+              sans: ["Outfit", "sans-serif"],
+            },
+            colors: {
+              "wedding-blush": "#f8d9d9",
+              "wedding-gold": "#d4af37",
+              "wedding-cream": "#f8f4e8",
+              "wedding-sage": "#d2ddd0",
+              "wedding-mauve": "#e0b0d5",
+            },
+            keyframes: {
+              "fade-in": {
+                "0%": {
+                  opacity: "0",
+                  transform: "translateY(10px)",
+                },
+                "100%": {
+                  opacity: "1",
+                  transform: "translateY(0)",
+                },
+              },
+            },
+            animation: {
+              "fade-in": "fade-in 0.8s ease-out",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      .animate-delay-200 {
+        animation-delay: 200ms;
+      }
+      .animate-delay-400 {
+        animation-delay: 400ms;
+      }
+      .animate-delay-600 {
+        animation-delay: 600ms;
+      }
+      .animate-delay-800 {
+        animation-delay: 800ms;
+      }
+    </style>
+  </head>
+
+  <body class="bg-white min-h-screen">
+    <!-- Hero Section -->
+    <div class="relative min-h-screen flex flex-col items-center justify-center text-center px-4 py-20">
+      <!-- Background with soft gradient overlay  -->
+      <div class="absolute inset-0 bg-cover bg-center z-0" style="background-image: url('./photo-1465146344425-f00d5f5c8f07.jpg')">
+        <div class="absolute inset-0 bg-gradient-to-b from-white/70 to-wedding-blush/70"></div>
+      </div>
+
+      <div class="relative z-10 max-w-4xl mx-auto">
+        <div class="w-full flex justify-center items-center">
+          <div class="w-40 h-40 mb-4 rounded-full overflow-hidden animate-fade-in animate-delay-200 bg-wedding-blush">
+            <img src="https://www.smartpuja.com/blog/wp-content/uploads/2023/09/Lord-Ganesha-1.jpg" loading="lazy" alt="Ganesh Ji" class="w-full h-full object-cover" />
+          </div>
+        </div>
+
+        <div class="mb-4 animate-fade-in animate-delay-200">
+          <p class="font-serif text-4xl md:text-4xl text-wedding-gold">Wedding Invitation</p>
+        </div>
+
+        <div class="mb-4 animate-fade-in animate-delay-200">
+          <p class="font-serif text-lg md:text-xl text-wedding-gold">Save the Date</p>
+        </div>
+
+        <div class="mb-4 animate-fade-in animate-delay-400">
+          <h1 class="font-serif text-5xl md:text-7xl font-light text-wedding-gold tracking-wide mb-2">Aradhika & Ram</h1>
+        </div>
+
+        <div class="mb-8 animate-fade-in animate-delay-600">
+          <div class="w-48 h-1 bg-wedding-gold mx-auto mb-8"></div>
+          <p class="font-serif text-2xl md:text-3xl text-gray-700">May 5, 2025</p>
+          <p class="mt-2 font-sans text-lg text-gray-600">Gorang Marriage gardern barhi katani(483770), Madhya Pradesh</p>
+        </div>
+
+        <div class="animate-fade-in animate-delay-800">
+          <p class="font-serif italic text-lg md:text-xl text-gray-600">"True love stories begin with the joining of hearts and families."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Countdown Section -->
+    <section class="py-16 px-4 bg-white">
+      <div class="max-w-5xl mx-auto">
+        <div class="flex flex-col items-center justify-center">
+          <h2 class="text-2xl md:text-3xl font-serif mb-8 text-wedding-gold">Counting Down to Our Special Day</h2>
+          <div class="flex space-x-4 md:space-x-8">
+            <div class="flex flex-col items-center">
+              <div class="bg-wedding-cream border border-wedding-gold rounded-lg w-16 md:w-24 h-16 md:h-24 flex items-center justify-center">
+                <span class="text-2xl md:text-4xl font-serif text-wedding-gold" id="days">0</span>
+              </div>
+              <span class="mt-2 text-sm md:text-base">Days</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <div class="bg-wedding-cream border border-wedding-gold rounded-lg w-16 md:w-24 h-16 md:h-24 flex items-center justify-center">
+                <span class="text-2xl md:text-4xl font-serif text-wedding-gold" id="hours">0</span>
+              </div>
+              <span class="mt-2 text-sm md:text-base">Hours</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <div class="bg-wedding-cream border border-wedding-gold rounded-lg w-16 md:w-24 h-16 md:h-24 flex items-center justify-center">
+                <span class="text-2xl md:text-4xl font-serif text-wedding-gold" id="minutes">0</span>
+              </div>
+              <span class="mt-2 text-sm md:text-base">Minutes</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <div class="bg-wedding-cream border border-wedding-gold rounded-lg w-16 md:w-24 h-16 md:h-24 flex items-center justify-center">
+                <span class="text-2xl md:text-4xl font-serif text-wedding-gold" id="seconds">0</span>
+              </div>
+              <span class="mt-2 text-sm md:text-base">Seconds</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="max-w-xs mx-auto bg-wedding-gold/20 h-px"></div>
+
+    <section class="bg-wedding-gold/20 flex justify-between my-16 relative lg:h-screen w-full h-72">
+      <!-- <div class="w-full lg:h-screen h-72 relative">
+        <img src="lax.jpg" class="h-full w-full object-cover" alt="" />
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-white font-medium tracking-wide font-serif">
+          <span class="lg:text-7xl text-4xl">Aradhika Tiwari</span>
+          <span class="lg:text-5xl">&</span>
+          <span class="lg:text-7xl text-4xl">Ram Mishra</span>
+        </div>
+      </div> -->
+      <div class="h-full grid grid-cols-3">
+        <div class="bg-red-600 row-span-2">
+          <img src="https://images.pexels.com/photos/16295838/pexels-photo-16295838/free-photo-of-indian-bride-wearing-traditional-wedding-outfit-and-jewelry.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          class="object-cover w-full h-full"
+          alt="">
+        </div>
+        <div class="bg-red-600">
+          <img src="https://images.pexels.com/photos/20820487/pexels-photo-20820487/free-photo-of-people-holding-hands-during-celebration-in-india.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          class="object-cover w-full h-full"
+          alt="">
+        </div>
+        <div class="bg-red-600">
+          <img src="https://images.pexels.com/photos/20046741/pexels-photo-20046741/free-photo-of-golden-bracelets-and-henna-tattoos-on-woman-arm.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          class="object-cover w-full h-full"
+          alt="">
+        </div>
+        <div class="bg-red-600">
+          <img src="https://images.pexels.com/photos/25932038/pexels-photo-25932038/free-photo-of-close-up-of-a-woman-stepping-her-foot-into-the-haldi-powder.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          class="object-cover w-full h-full"
+          alt="">
+        </div>
+        <div class="bg-red-600">
+          <img src="https://images.pexels.com/photos/12432088/pexels-photo-12432088.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          class="object-cover w-full h-full"
+          alt="">
+        </div>
+      </div>
+      <div class="absolute inset-0 flex flex-col items-center justify-center text-white font-medium tracking-wide font-serif">
+        <span class="lg:text-7xl text-4xl stroke stroke-black">Aradhika Tiwari</span>
+        <span class="lg:text-5xl">&</span>
+        <span class="lg:text-7xl text-4xl">Ram Mishra</span>
+      </div>
+    </section>
+
+    <!-- Our Family section -->
+    <section class="py-16 px-4 bg-wedding-blush/10">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="font-serif text-4xl text-center mb-12 text-wedding-gold"><i class="ri-group-line"></i> Our Families</h2>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-wedding-cream/50 rounded-lg p-6 shadow-sm border border-wedding-gold/20 animate-fade-in">
+            <h4 class="font-serif text-xl text-wedding-gold mb-4">The Bride Family</h4>
+            <ul class="space-y-2 text-gray-700">
+              <li class="font-medium">Bramhdutt Tiwari & Pushpa Tiwari <span class="font-normal">(Parents of the Bride)</span></li>
+              <li>Late Ramvishal Tiwari & Late Smt Kuarbai Tiwari<span class="text-sm text-gray-500">(Paternal Grandparents)</span></li>
+              <li>Parwati Tiwari <span class="text-sm text-gray-500"> Sister</span></li>
+              <li>Ramlala Tiwari <span class="text-sm text-gray-500"> Brother</span></li>
+             
+            </ul>
+          </div>
+
+          <div class="bg-wedding-cream/50 rounded-lg p-6 shadow-sm border border-wedding-gold/20 animate-fade-in">
+            <h4 class="font-serif text-xl text-wedding-gold mb-4">The Groom Family</h4>
+            <ul class="space-y-2 text-gray-700">
+              <li class="font-medium">Sitaram Mishra & Urmila Mishra<span class="font-normal">(Parents of the Groom)</span></li>
+              <li>Late Dhaniram Mishra & Late Smt Bittan Mishra<span class="text-sm text-gray-500">(Paternal Grandparents)</span></li>
+              <li>veena & Bharti Tiwari <span class="text-sm text-gray-500">(Brother & Sister-in-law)</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6 mt-10">
+          <div class="flex flex-col items-center p-6 bg-wedding-cream/30 rounded-lg border border-wedding-gold/10">
+            <div class="w-16 h-16 rounded-full bg-wedding-gold/30 flex items-center justify-center mb-4">
+              <i class="ri-calendar-line text-wedding-gold text-2xl"></i>
+            </div>
+            <h3 class="font-serif text-xl mb-2 text-wedding-gold">The Date</h3>
+            <p>Monday, May 05, 2025</p>
+            <p class="text-sm text-gray-600 mt-1">Save the date!</p>
+          </div>
+
+          <div class="flex flex-col items-center p-6 bg-wedding-cream/30 rounded-lg border border-wedding-gold/10">
+            <div class="w-16 h-16 rounded-full bg-wedding-gold/30 flex items-center justify-center mb-4">
+              <i class="ri-timer-line text-wedding-gold text-2xl"></i>
+            </div>
+            <h3 class="font-serif text-xl mb-2 text-wedding-gold">The Time</h3>
+            <p>Ceremony: 8:00 PM</p>
+            <p class="text-sm text-gray-600 mt-1">Reception to follow</p>
+          </div>
+
+          <div class="flex flex-col items-center p-6 bg-wedding-cream/30 rounded-lg border border-wedding-gold/10">
+            <div class="w-16 h-16 rounded-full bg-wedding-gold/30 flex items-center justify-center mb-4">
+              <i class="ri-map-pin-line text-wedding-gold text-2xl"></i>
+            </div>
+            <h3 class="font-serif text-xl mb-2 text-wedding-gold">The Place</h3>
+            <p>Gorang Marriage gardern </p>
+            <p class="text-sm text-gray-600 mt-1">barhi katani(483770), Madhya Pradesh</p>
+          </div>
+        </div>
+
+        <div class="mt-10 text-center">
+          <p class="italic text-lg text-wedding-mauve">"We look forward to celebrating the beginning of our forever with you."</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="max-w-xs mx-auto bg-wedding-gold/20 h-px"></div>
+
+    <!-- Event Details Section -->
+    <section class="py-16 px-4 bg-wedding-blush/10">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="font-serif text-4xl text-center mb-12 text-wedding-gold"><i class="ri-hotel-line"></i> Our Special Day Events</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-wedding-cream/50 rounded-lg p-6 shadow-sm border border-wedding-gold/20 animate-fade-in">
+            <h3 class="font-serif text-2xl mb-3 text-wedding-gold">Lagan Lekhan</h3>
+
+            <div class="flex items-center mb-2">
+              <i class="ri-calendar-line text-wedding-mauve text-lg mr-2"></i>
+              <span>Saturday, May 03 2025</span>
+            </div>
+
+            <div class="flex items-center mb-2">
+              <i class="ri-timer-line text-wedding-mauve text-lg mr-2"></i>
+              <span>8:00 PM</span>
+            </div>
+
+            <div class="mb-2">
+              <div class="flex items-start">
+                <i class="ri-map-pin-line text-wedding-mauve text-lg mr-2"></i>
+                <div>
+                  <p class="font-medium">Home</p>
+                  <p class="text-sm text-gray-600">barhi katani(483770), Madhya Pradesh</p>
+                </div>
+              </div>
+            </div>
+
+            <p class="mt-4 text-gray-700">Join us as we celebrate the sacred 'Lagan Lekan' ceremony, where we come together to mark the beginning of our journey towards a lifetime of love and togetherness, surrounded by the blessings of our closest family and friends.</p>
+          </div>
+
+          <div class="bg-wedding-cream/50 rounded-lg p-6 shadow-sm border border-wedding-gold/20 animate-fade-in">
+            <h3 class="font-serif text-2xl mb-3 text-wedding-gold">Reception Of Barat</h3>
+
+            <div class="flex items-center mb-2">
+              <i class="ri-calendar-line text-wedding-mauve text-lg mr-2"></i>
+              <span>Monday, May 05 2025</span>
+            </div>
+
+            <div class="flex items-center mb-2">
+              <i class="ri-timer-line text-wedding-mauve text-lg mr-2"></i>
+              <span>8:00 PM</span>
+            </div>
+
+            <div class="mb-2">
+              <div class="flex items-start">
+                <i class="ri-map-pin-line text-wedding-mauve text-lg mr-2"></i>
+                <div>
+                  <p class="font-medium">Gorang Marriage gardern</p>
+                  <p class="text-sm text-gray-600">barhi katani(483770), Madhya Pradesh</p>
+                </div>
+              </div>
+            </div>
+
+            <p class="mt-4 text-gray-700">Join us for the grand reception of our Barat, where love, joy, and tradition unite. Surrounded by family and friends, we celebrate this beautiful moment and begin our journey together. Your presence will make this evening even more special as we share in the happiness of new beginnings</p>
+          </div>
+
+          <div class="bg-wedding-cream/50 rounded-lg p-6 shadow-sm border border-wedding-gold/20 animate-fade-in">
+            <h3 class="font-serif text-2xl mb-3 text-wedding-gold">Dinner</h3>
+
+            <div class="flex items-center mb-2">
+              <i class="ri-calendar-line text-wedding-mauve text-lg mr-2"></i>
+              <span>Monday, May 05 2025</span>
+            </div>
+
+            <div class="flex items-center mb-2">
+              <i class="ri-timer-line text-wedding-mauve text-lg mr-2"></i>
+              <span>8:00 PM</span>
+            </div>
+
+            <div class="mb-2">
+              <div class="flex items-start">
+                <i class="ri-map-pin-line text-wedding-mauve text-lg mr-2"></i>
+                <div>
+                  <p class="font-medium">Gorang Marriage gardern</p>
+                  <p class="text-sm text-gray-600">barhi katani(483770), Madhya Pradesh</p>
+                </div>
+              </div>
+            </div>
+
+            <p class="mt-4 text-gray-700">Join us for a memorable dinner as we celebrate love, joy, and new beginnings with family and friends. Your presence will make this evening even more special.</p>
+          </div>
+
+          <div class="bg-wedding-cream/50 rounded-lg p-6 shadow-sm border border-wedding-gold/20 animate-fade-in">
+            <h3 class="font-serif text-2xl mb-3 text-wedding-gold">Panigrahan Sanskar</h3>
+
+            <div class="flex items-center mb-2">
+              <i class="ri-calendar-line text-wedding-mauve text-lg mr-2"></i>
+              <span>Monday, May 05 2025</span>
+            </div>
+
+            <div class="flex items-center mb-2">
+              <i class="ri-timer-line text-wedding-mauve text-lg mr-2"></i>
+              <span>At Night</span>
+            </div>
+
+            <div class="mb-2">
+              <div class="flex items-start">
+                <i class="ri-map-pin-line text-wedding-mauve text-lg mr-2"></i>
+                <div>
+                  <p class="font-medium">Gorang Marriage gardern</p>
+                  <p class="text-sm text-gray-600">barhi katani(483770), Madhya Pradesh</p>
+                </div>
+              </div>
+            </div>
+
+            <p class="mt-4 text-gray-700">Join us for a meaningful ceremony as we celebrate love, unity, and sacred vows with family and friends. Your presence will make this spiritual moment even more special as we embark on our journey together.</p>
+          </div>
+
+         
+        </div>
+      </div>
+    </section>
+
+    <div class="max-w-xs mx-auto bg-wedding-gold/20 h-px"></div>
+
+    <!-- Photo Gallery Section -->
+    <section class="py-16 px-4 bg-white">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="font-serif text-4xl text-center mb-12 text-wedding-gold"><i class="ri-image-circle-ai-line"></i> Our Gallery</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4">
+          <div class="overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-all duration-300 animate-fade-in">
+            <div class="aspect-[4/4] bg-wedding-cream">
+              <img src="papa.jpeg" loading="lazy" alt="Father" class="object-cover w-full h-full hover:scale-105 transition-transform duration-500" />
+            </div>
+            <div class="p-4 text-center bg-wedding-cream">
+              <p class="text-sm font-medium text-gray-700">
+                Sanjay Chaurasiya ( Father ) <br />
+                Kanchan Chaurasiya (Mother )
+              </p>
+            </div>
+          </div>
+
+          <div class="overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-all duration-300 animate-fade-in">
+            <div class="aspect-[4/4] bg-wedding-cream overflow-hidden">
+              <img src="paro.jpeg" alt="Elder Sister" loading="lazy" class="object-cover h-screen w-full hover:scale-105 transition-transform duration-500" />
+            </div>
+            <div class="p-4 text-center bg-wedding-cream h-full">
+              <p class="text-sm font-medium text-gray-700 lg:mt-2">Parwati ( Elder Sister )</p>
+            </div>
+          </div>
+
+          <div class="overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-all duration-300 animate-fade-in">
+            <div class="aspect-[4/4] bg-wedding-cream">
+              <img src="saala.jpeg" loading="lazy" alt="Younger Sister" class="object-cover w-full h-full hover:scale-105 transition-transform duration-500" />
+            </div>
+            <div class="p-4 text-center bg-wedding-cream h-full">
+              <p class="text-sm font-medium text-gray-700">Ramlala & Reshu</p>
+            </div>
+          </div>
+
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-16 px-4 bg-white">
+      <div class="max-w-5xl mx-auto">
+        <div class="bg-wedding-cream/50 rounded-lg p-8 shadow-sm border border-wedding-gold/20">
+          <h2 class="font-serif text-3xl mb-6 text-center text-wedding-gold">Contact for any Enquiry</h2>
+
+          <p class="text-center mb-8 max-w-xl mx-auto">Your presence at our wedding means the world to us. For any inquiries or additional information, please don't hesitate to reach out to us.</p>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="flex flex-col items-center p-4 rounded-lg bg-white shadow-sm border border-wedding-gold/10 animate-fade-in">
+              <div class="w-16 h-16 mb-4 rounded-full bg-wedding-blush overflow-hidden">
+                <img src="papa2.png" loading="lazy" alt="sanjay" class="w-full h-full object-cover text-wedding-gold object-top" />
+              </div>
+              <h3 class="font-serif text-xl mb-4">Bramhdutt Tiwari</h3>
+              <a href="tel:+919893456719" target="_blank" rel="noopener noreferrer" class="px-4 py-2 border border-wedding-gold/50 hover:bg-wedding-gold/10 text-wedding-gold rounded-md transition-colors"> Call Now </a>
+            </div>
+
+            <div class="flex flex-col items-center p-4 rounded-lg bg-white shadow-sm border border-wedding-gold/10 animate-fade-in">
+              <div class="w-16 h-16 mb-4 rounded-full bg-wedding-blush overflow-hidden">
+                <img src="saala2.png" loading="lazy" alt="Mansi" class="w-full h-full object-cover text-wedding-gold object-center" />
+              </div>
+              <h3 class="font-serif text-xl mb-4">Ramlala Tiwari</h3>
+              <a href="tel:+919752162240" target="_blank" rel="noopener noreferrer" class="px-4 py-2 border border-wedding-gold/50 hover:bg-wedding-gold/10 text-wedding-gold rounded-md transition-colors"> Call Now </a>
+            </div>
+
+            <div class="flex flex-col items-center p-4 rounded-lg bg-white shadow-sm border border-wedding-gold/10 animate-fade-in">
+              <div class="w-16 h-16 mb-4 rounded-full bg-wedding-blush overflow-hidden">
+                <img src="jeet.png" loading="lazy" alt="gungun" class="w-full text-wedding-gold object-bottom" />
+              </div>
+              <h3 class="font-serif text-xl mb-4">Jitendra Garg</h3>
+              <a href="tel:+919993711399" target="_blank" rel="noopener noreferrer" class="px-4 py-2 border border-wedding-gold/50 hover:bg-wedding-gold/10 text-wedding-gold rounded-md transition-colors"> Call Now </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-4 text-center bg-wedding-cream/30 border-t border-wedding-gold/10">
+      <div class="max-w-5xl mx-auto">
+        <div class="flex justify-center items-center mb-4">
+          <p class="font-serif text-lg flex items-center">
+            Aradhika & Ram
+            <svg class="h-4 w-4 mx-2 text-wedding-gold fill-wedding-gold" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 20l-6-6h4v-8h4v8h4z"></path>
+            </svg>
+          </p>
+        </div>
+        <hr class="mb-6 border-wedding-gold" />
+        <div class="flex lg:flex-row flex-col lg:gap-0 gap-y-2 items-center justify-between">
+          <p class="text-sm text-gray-500">© 2025 Aradhika & Ram. All rights reserved.</p>
+          <p>Designed + Coded by <a href="https://github.com/VidhiCode-IN" target="_new" aria-label="VidhiCode" class="font-semibold text-wedding-gold">VidhiCode</a></p>
+        </div>
+      </div>
+    </footer>
+    <!-- Add the JavaScript for countdown functionality -->
+
+    <script>
+      // Set the date for the countdown (format: YYYY-MM-DD HH:MM:SS)
+      const countDownDate = new Date("2025-05-05T12:00:00").getTime();
+
+      // Update the countdown every 1 second
+      const x = setInterval(function () {
+        // Get the current date and time
+        const now = new Date().getTime();
+
+        // Calculate the difference between the countdown date and the current date
+        const distance = countDownDate - now;
+
+        // Time calculations for days, hours, minutes, and seconds
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Display the results in the HTML
+        document.getElementById("days").innerHTML = days;
+        document.getElementById("hours").innerHTML = hours;
+        document.getElementById("minutes").innerHTML = minutes;
+        document.getElementById("seconds").innerHTML = seconds;
+
+        // If the countdown is finished, display a message
+        if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("days").innerHTML = "0";
+          document.getElementById("hours").innerHTML = "0";
+          document.getElementById("minutes").innerHTML = "0";
+          document.getElementById("seconds").innerHTML = "0";
+          // Optionally, you can display a custom message or trigger an event here
+          alert("The special day has arrived!");
+        }
+      }, 1000);
+    </script>
+  </body>
+</html>
